@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:pdax_flutter_exam/config/dimensions.dart' as dimensions;
 import 'package:pdax_flutter_exam/config/provider/dimensions_provider.dart';
+import 'package:pdax_flutter_exam/config/themes.dart';
+import 'package:pdax_flutter_exam/router/router.dart';
 
 void main() async {
   // =============== Load ENV =============== //
@@ -22,6 +24,7 @@ class App extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final router = ref.watch(goRouteProvider);
     final screenSize = MediaQuery.of(context).size;
 
     // To determine the device screen size and set the state
@@ -37,6 +40,11 @@ class App extends ConsumerWidget {
     });
 
     //
-    return Container();
+    return MaterialApp.router(
+      title: "Charles Lim",
+      routerConfig: router,
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme(context: context).themeData,
+    );
   }
 }
