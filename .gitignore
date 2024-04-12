@@ -25,3 +25,46 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+# See https://dart.dev/tools/pub/cmd/pub-get#special-files
+.dart_tool/
+.pub/
+/build/
+.dart_plugins
+.flutter-plugins
+.flutter-plugins-dependencies
+# .vscode/
+
+# macOS specific files
+.DS_Store
+
+# IntelliJ-specific files
+.idea/
+
+# Android specific files
+**/android/**/gradle-wrapper.jar
+**/android/**/gradlew
+**/android/**/gradlew.bat
+**/android/**/.gradle/
+**/android/captures/
+
+# iOS specific files
+**/ios/Pods/
+**/ios/Podfile.lock
+**/ios/Podfile.lock.backup
+**/ios/Runner.xcworkspace/
+**/ios/.symlinks/
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/Generated.xcconfig
+
+# Web specific files
+/build/web/
+
+# Exclude the Flutter generated files
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-plugins/ios/
+.flutter-plugins/android/
+
+# Exclude the Flutter build directory
+/build/
