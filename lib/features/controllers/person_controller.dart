@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:pdax_flutter_exam/config/provider/dio_provider.dart';
 import 'package:pdax_flutter_exam/features/models/person_model.dart';
-import 'package:pdax_flutter_exam/features/providers/person_list_provider.dart';
+import 'package:pdax_flutter_exam/features/providers/person_list_provider/person_list_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'person_controller.g.dart';
