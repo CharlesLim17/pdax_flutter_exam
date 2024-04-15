@@ -5,7 +5,8 @@ import 'package:pdax_flutter_exam/config/constants.dart' as constants;
 import 'package:pdax_flutter_exam/features/providers/person_list_provider.dart';
 import 'package:pdax_flutter_exam/features/widgets/person_list/components/mobile_components/mobile_person_list_header.dart';
 import 'package:pdax_flutter_exam/features/widgets/person_list/components/mobile_components/mobile_person_list_view.dart';
-import 'package:pdax_flutter_exam/global/custom_shimmer.dart';
+import 'package:pdax_flutter_exam/global/empty_screens/mobile_not_found.dart';
+import 'package:pdax_flutter_exam/global/shimmers/custom_shimmer.dart';
 
 class MobilePersonList extends ConsumerStatefulWidget {
   const MobilePersonList({super.key});
@@ -108,7 +109,7 @@ class _MobilePersonListState extends ConsumerState<MobilePersonList> {
                   isFirstFetched
                       ? buildLoadingSkeleton()
                       : personList.isEmpty
-                          ? Container()
+                          ? const MobileNotFoundWidget()
                           : MobilePersonListView(
                               personList: personList,
                               appendCount: appendCount,
