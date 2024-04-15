@@ -105,7 +105,7 @@ class _MobilePersonListState extends ConsumerState<MobilePersonList> {
 
                   const SizedBox(height: 16),
 
-                  // =================== List =================== //
+                  // =================== Person List =================== //
                   isFirstFetched
                       ? buildLoadingSkeleton()
                       : personList.isEmpty

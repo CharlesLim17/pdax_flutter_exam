@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pdax_flutter_exam/config/constants.dart' as constants;
 import 'package:pdax_flutter_exam/features/models/person_model.dart';
+import 'package:pdax_flutter_exam/features/providers/person_details_provider/person_details_provider.dart';
 
 class MobilePersonListView extends ConsumerWidget {
   const MobilePersonListView({
@@ -26,92 +28,130 @@ class MobilePersonListView extends ConsumerWidget {
 
           return Padding(
             padding: const EdgeInsets.only(bottom: 12.0),
-            child: Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16,
-                vertical: 16,
-              ),
-              decoration: BoxDecoration(
-                color: constants.background,
-                border: Border.all(
-                  color: constants.primary,
-                  width: 2,
+            child: InkWell(
+              onTap: () async {
+                await ref.read(personDetailsProvider.notifier).setValue(person);
+
+                if (context.mounted) {
+                  context.pushNamed('PersonDetailsScreen');
+                }
+              },
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 16,
                 ),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  // =================== Image =================== //
-                  SizedBox(
-                    height: 45,
-                    width: 45,
-                    child: ClipOval(
-                      child: Image.network(
-                        person.image!,
-                        errorBuilder: (context, error, stackTrace) {
-                          return Container(
-                            decoration: const BoxDecoration(
-                              color: constants.mainText,
-                              shape: BoxShape.circle,
-                            ),
-                            child: Center(
-                              child: Text(
-                                'Empty Image Link',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .labelLarge
-                                    ?.copyWith(
-                                      color: constants.subText,
-                                      fontSize: 9,
-                                      fontWeight: FontWeight.bold,
+                decoration: BoxDecoration(
+                  color: constants.background,
+                  border: Border.all(
+                    color: constants.primary,
+                    width: 2,
+                  ),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    // =================== Image, Name & Email =================== //
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          // =================== Image =================== //
+                          SizedBox(
+                            height: 45,
+                            width: 45,
+                            child: ClipOval(
+                              child: Image.network(
+                                person.image!,
+                                errorBuilder: (context, error, stackTrace) {
+                                  return Container(
+                                    decoration: const BoxDecoration(
+                                      color: constants.mainText,
+                                      shape: BoxShape.circle,
                                     ),
-                                textAlign: TextAlign.center,
+                                    child: Center(
+                                      child: Text(
+                                        'Empty Image Link',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .labelLarge
+                                            ?.copyWith(
+                                              color: constants.subText,
+                                              fontSize: 9,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  );
+                                },
                               ),
                             ),
-                          );
-                        },
+                          ),
+
+                          //
+                          const SizedBox(width: 16),
+
+                          // =================== Name & Email =================== //
+                          Flexible(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Name
+                                Text(
+                                  'Name: ${person.firstname} ${person.lastname}',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .labelLarge
+                                      ?.copyWith(
+                                        color: constants.mainText,
+                                        fontSize: 12,
+                                      ),
+                                ),
+
+                                //
+                                const SizedBox(height: 4),
+
+                                // Email
+                                Text(
+                                  'Email: ${person.email}',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .labelLarge
+                                      ?.copyWith(
+                                        color: constants.mainText,
+                                        fontSize: 12,
+                                      ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ),
 
-                  //
-                  const SizedBox(width: 16),
+                    // =================== Arrow Icon =================== //
+                    IconButton(
+                      onPressed: () async {
+                        await ref
+                            .read(personDetailsProvider.notifier)
+                            .setValue(person);
 
-                  // =================== Name & Email =================== //
-                  Flexible(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        // Name
-                        Text(
-                          'Name: ${person.firstname} ${person.lastname}',
-                          style:
-                              Theme.of(context).textTheme.labelLarge?.copyWith(
-                                    color: constants.mainText,
-                                    fontSize: 12,
-                                  ),
-                        ),
+                        if (context.mounted) {
+                          context.pushNamed('PersonDetailsScreen');
+                        }
+                      },
+                      icon: const Icon(
+                        Icons.arrow_right,
+                        color: constants.primary,
+                      ),
+                    )
 
-                        //
-                        const SizedBox(height: 4),
-
-                        // Email
-                        Text(
-                          'Email: ${person.email}',
-                          style:
-                              Theme.of(context).textTheme.labelLarge?.copyWith(
-                                    color: constants.mainText,
-                                    fontSize: 12,
-                                  ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  //
-                ],
+                    //
+                  ],
+                ),
               ),
             ),
           );
