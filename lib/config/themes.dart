@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pdax_flutter_exam/config/constants.dart' as constants;
 
 class AppTheme {
   // constuctor
@@ -16,11 +17,12 @@ class AppTheme {
   // ================= Input Decoration Theme ================= //
   InputDecorationTheme get _inputDecoration => InputDecorationTheme(
         filled: true,
-        fillColor: const Color(0xFFF3F3F3),
+        fillColor: Colors.transparent,
         enabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(
-            width: 0,
-            style: BorderStyle.none,
+            width: 1,
+            style: BorderStyle.solid,
+            color: constants.primary,
           ),
           borderRadius: BorderRadius.circular(6),
         ),
