@@ -34,6 +34,21 @@ class ListQuantity extends _$ListQuantity {
 }
 
 // =========================================================================
+// Append/Add Count
+// =========================================================================
+@Riverpod(keepAlive: true)
+class ListAppendCount extends _$ListAppendCount {
+  @override
+  int build() {
+    return 1;
+  }
+
+  Future<void> increment() async {
+    state += 1;
+  }
+}
+
+// =========================================================================
 // Identifier if it is the first/initial load or not
 // =========================================================================
 @Riverpod(keepAlive: true)

@@ -30,6 +30,7 @@ class PersonListController extends _$PersonListController {
       );
 
       debugPrint('Fetched Persons Status Code ${response.statusCode}');
+      debugPrint('Fetched Persons ${response.data}');
 
       if (response.statusCode == 200) {
         // Parse response data to list

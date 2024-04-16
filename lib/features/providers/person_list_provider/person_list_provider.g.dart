@@ -34,6 +34,21 @@ final listQuantityProvider = NotifierProvider<ListQuantity, int>.internal(
 );
 
 typedef _$ListQuantity = Notifier<int>;
+String _$listAppendCountHash() => r'a48e0734a312f9fc175d9c916beb5b9878565535';
+
+/// See also [ListAppendCount].
+@ProviderFor(ListAppendCount)
+final listAppendCountProvider = NotifierProvider<ListAppendCount, int>.internal(
+  ListAppendCount.new,
+  name: r'listAppendCountProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$listAppendCountHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef _$ListAppendCount = Notifier<int>;
 String _$isPersonFirstFetchHash() =>
     r'f6616987b0fd1a78ce537c82c5139ef9f5e6c636';
 
