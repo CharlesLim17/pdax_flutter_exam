@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 import 'package:pdax_flutter_exam/features/models/person_model.dart';
 import 'package:pdax_flutter_exam/config/constants.dart' as constants;
 import 'package:pdax_flutter_exam/global/fields/custom_text_field.dart';
@@ -19,6 +20,9 @@ class MobilePersonSpecificDetails extends ConsumerWidget {
     TextEditingController birthdayCtrlr = TextEditingController();
     TextEditingController genderCtrlr = TextEditingController();
     TextEditingController websisteCtlr = TextEditingController();
+
+    String formattedBdate =
+        DateFormat('MMMM dd, yyyy').format(person.birthday!);
 
     //
     return Column(
@@ -167,7 +171,7 @@ class MobilePersonSpecificDetails extends ConsumerWidget {
                   const SizedBox(height: 4),
 
                   CustomTextField(
-                    ctrlr: birthdayCtrlr..text = person.birthday!.toString(),
+                    ctrlr: birthdayCtrlr..text = formattedBdate,
                     enabled: false,
                     hint: 'Birthday',
                     fontSize: 16,
