@@ -1,16 +1,26 @@
-# pdax_flutter_exam
+## How to Run the Application
 
-A new Flutter project.
+1. Clone the Respository:
+```
+$ git clone (i need to update link here)
+```
 
-## Getting Started
+2. Clean the Project:
+```
+$ flutter clean
+```
 
-This project is a starting point for a Flutter application.
+3. Get Dependencies:
+```
+$ flutter pub get
+```
 
-A few resources to get you started if this is your first Flutter project:
+4. Run the Application:
+```
+$ flutter run
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Additional Notes
+- State Manager: The application uses Flutter Riverpod for state management. Refer to Riverpod Documentation for more details. (https://riverpod.dev/docs/introduction/getting_started)
+- Architecture: The project follows the MVC (Model-View-Controller) architecture pattern for better code organization and separation of concerns.
+- Faker API Image Responses: Note that the Faker API sometimes returns empty images. The application handles this scenario gracefully by displaying an error message instead.
