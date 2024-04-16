@@ -5,7 +5,7 @@
 
 1. Clone the Respository:
 ```
-$ git clone (i need to update link here)
+$ git clone https://github.com/CharlesLim17/pdax_flutter_exam.git
 ```
 
 2. Clean the Project:
