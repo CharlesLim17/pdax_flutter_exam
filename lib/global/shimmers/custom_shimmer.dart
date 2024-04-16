@@ -13,106 +13,106 @@ Widget buildLoadingSkeleton() {
         children: [
           Container(
             width: double.infinity,
-            height: 50,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 50,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 50,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 50,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 50,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 50,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 50,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 50,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 50,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 50,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 50,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 50,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
