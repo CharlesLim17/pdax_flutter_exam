@@ -7,11 +7,13 @@ class CustomTextField extends StatelessWidget {
     required this.ctrlr,
     required this.enabled,
     required this.hint,
+    required this.fontSize,
   });
 
   final TextEditingController ctrlr;
   final bool enabled;
   final String hint;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class CustomTextField extends StatelessWidget {
       // Input Text Styles
       style: Theme.of(context).textTheme.labelLarge!.copyWith(
             color: color_constants.mainText,
-            fontSize: 16,
+            fontSize: fontSize,
           ),
 
       // Decorations
@@ -42,7 +44,7 @@ class CustomTextField extends StatelessWidget {
         hintText: hint,
         hintStyle: Theme.of(context).textTheme.labelLarge!.copyWith(
               color: color_constants.subText,
-              fontSize: 16,
+              fontSize: fontSize,
             ),
       ),
     );
