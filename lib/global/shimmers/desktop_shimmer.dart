@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-Widget buildLoadingSkeleton() {
+Widget buildDesktopLoadingSkeleton() {
   //
   return Shimmer.fromColors(
     baseColor: Colors.grey.shade800,
@@ -13,7 +13,7 @@ Widget buildLoadingSkeleton() {
         children: [
           Container(
             width: double.infinity,
-            height: 60,
+            height: 75,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
@@ -22,7 +22,7 @@ Widget buildLoadingSkeleton() {
           const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 60,
+            height: 75,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
@@ -31,7 +31,7 @@ Widget buildLoadingSkeleton() {
           const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 60,
+            height: 75,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
@@ -40,7 +40,7 @@ Widget buildLoadingSkeleton() {
           const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 60,
+            height: 75,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
@@ -49,7 +49,7 @@ Widget buildLoadingSkeleton() {
           const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 60,
+            height: 75,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
@@ -58,7 +58,7 @@ Widget buildLoadingSkeleton() {
           const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 60,
+            height: 75,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
@@ -67,7 +67,7 @@ Widget buildLoadingSkeleton() {
           const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 60,
+            height: 75,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
@@ -76,7 +76,7 @@ Widget buildLoadingSkeleton() {
           const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 60,
+            height: 75,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
@@ -85,7 +85,7 @@ Widget buildLoadingSkeleton() {
           const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 60,
+            height: 75,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
@@ -94,7 +94,7 @@ Widget buildLoadingSkeleton() {
           const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 60,
+            height: 75,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
@@ -103,7 +103,7 @@ Widget buildLoadingSkeleton() {
           const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 60,
+            height: 75,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
@@ -112,7 +112,7 @@ Widget buildLoadingSkeleton() {
           const SizedBox(height: 24),
           Container(
             width: double.infinity,
-            height: 60,
+            height: 75,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,

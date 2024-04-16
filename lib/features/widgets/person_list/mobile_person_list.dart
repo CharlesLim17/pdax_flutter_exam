@@ -6,7 +6,7 @@ import 'package:pdax_flutter_exam/features/providers/person_list_provider/person
 import 'package:pdax_flutter_exam/features/widgets/person_list/components/mobile_components/mobile_person_list_header.dart';
 import 'package:pdax_flutter_exam/features/widgets/person_list/components/mobile_components/mobile_person_list_view.dart';
 import 'package:pdax_flutter_exam/global/empty_screens/mobile_not_found.dart';
-import 'package:pdax_flutter_exam/global/shimmers/custom_shimmer.dart';
+import 'package:pdax_flutter_exam/global/shimmers/mobile_shimmer.dart';
 
 class MobilePersonList extends ConsumerStatefulWidget {
   const MobilePersonList({super.key});
@@ -107,7 +107,7 @@ class _MobilePersonListState extends ConsumerState<MobilePersonList> {
 
                   // =================== Person List =================== //
                   isFirstFetched
-                      ? buildLoadingSkeleton()
+                      ? buildMobileLoadingSkeleton()
                       : personList.isEmpty
                           ? const MobileNotFoundWidget()
                           : MobilePersonListView(

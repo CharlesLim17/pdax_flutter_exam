@@ -6,7 +6,7 @@ import 'package:pdax_flutter_exam/config/constants.dart' as constants;
 import 'package:pdax_flutter_exam/features/widgets/person_list/components/tablet_components/tablet_person_list_header.dart';
 import 'package:pdax_flutter_exam/features/widgets/person_list/components/tablet_components/tablet_person_list_view.dart';
 import 'package:pdax_flutter_exam/global/empty_screens/tablet_not_found.dart';
-import 'package:pdax_flutter_exam/global/shimmers/custom_shimmer.dart';
+import 'package:pdax_flutter_exam/global/shimmers/tablet_shimmer.dart';
 
 class TabletPersonList extends ConsumerWidget {
   const TabletPersonList({super.key});
@@ -49,7 +49,7 @@ class TabletPersonList extends ConsumerWidget {
               isFirstFetched
                   ? Expanded(
                       child: SingleChildScrollView(
-                        child: buildLoadingSkeleton(),
+                        child: buildTabletLoadingSkeleton(),
                       ),
                     )
                   : personList.isEmpty

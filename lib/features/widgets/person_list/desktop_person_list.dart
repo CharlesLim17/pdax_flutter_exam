@@ -6,7 +6,7 @@ import 'package:pdax_flutter_exam/config/constants.dart' as constants;
 import 'package:pdax_flutter_exam/features/widgets/person_list/components/desktop_components/desktop_person_list_header.dart';
 import 'package:pdax_flutter_exam/features/widgets/person_list/components/desktop_components/desktop_person_list_view.dart';
 import 'package:pdax_flutter_exam/global/empty_screens/desktop_not_found.dart';
-import 'package:pdax_flutter_exam/global/shimmers/custom_shimmer.dart';
+import 'package:pdax_flutter_exam/global/shimmers/desktop_shimmer.dart';
 
 class DesktopPersonList extends ConsumerWidget {
   const DesktopPersonList({super.key});
@@ -49,7 +49,7 @@ class DesktopPersonList extends ConsumerWidget {
               isFirstFetched
                   ? Expanded(
                       child: SingleChildScrollView(
-                        child: buildLoadingSkeleton(),
+                        child: buildDesktopLoadingSkeleton(),
                       ),
                     )
                   : personList.isEmpty
