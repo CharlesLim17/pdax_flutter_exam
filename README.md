@@ -1,3 +1,6 @@
+# PDAX Flutter Assessment
+- Applicant: Charles Angelo M. Lim | choylim06@gmail.com
+
 ## How to Run the Application
 
 1. Clone the Respository:
