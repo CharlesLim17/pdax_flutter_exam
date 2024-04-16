@@ -41,7 +41,7 @@ class App extends ConsumerWidget {
 
     //
     return MaterialApp.router(
-      title: "Charles Lim",
+      title: "Charles Lim PDAX",
       routerConfig: router,
       debugShowCheckedModeBanner: false,
       theme: AppTheme(context: context).themeData,
